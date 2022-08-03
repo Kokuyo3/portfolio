@@ -1,8 +1,8 @@
 {
-  "name": "cstang",
+  "name": "cstang-dev",
   "version": "1.0.0",
   "private": true,
-  "description": "cstang",
+  "description": "CSTang.dev",
   "author": "Kokuyo3",
   "keywords": [
     "gatsby"
