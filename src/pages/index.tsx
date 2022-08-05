@@ -8,7 +8,7 @@ const pageStyles = {
 }
 const headingStyles = {
   marginTop: 0,
-  marginBottom: 64,
+  marginBottom: 128,
   maxWidth: 320,
 }
 const headingAccentStyles = {
@@ -139,6 +139,9 @@ const links = [
 const IndexPage = () => {
   return (
     <main style={pageStyles}>
+      <h1 className="text-3xl text-sky-400 font-bold underline">
+        Hello world! TailwindCSS is working if this is formatted.
+      </h1>
       <h1 style={headingStyles}>
         Congratulations
         <br />
