@@ -14,25 +14,26 @@ const config: GatsbyConfig = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        'icon': 'src/images/icon.png'
+        icon: 'src/images/icon.png'
       }
     },
     {
       resolve: 'gatsby-plugin-postcss',
       options: {
-        postCssPlugins: [require('tailwindcss')('./tailwind.config.js')],
-      },
+        postCssPlugins: [require('tailwindcss')('./tailwind.config.js')]
+      }
     },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        'name': 'images',
-        'path': './src/images/'
+        name: 'images',
+        path: './src/images/'
       },
       __key: 'images'
-    }]
+    }
+  ]
 };
 
 export default config;
