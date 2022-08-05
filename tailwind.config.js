@@ -12,7 +12,5 @@ module.exports = {
     require('tailwindcss'),
     require('autoprefixer'),
     require('@tailwindcss/typography')
-  ],
-  purge: ['./src/pages/**/*.{js,jsx,ts,tsx}',
-    './src/components/**/*.{js,jsx,ts,tsx}'],
+  ]
 };
