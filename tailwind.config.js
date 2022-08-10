@@ -13,7 +13,11 @@ module.exports = {
       colors: {
         'term-aubergine': '#5E2750',
         'term-green': '#8ae234',
-        'term-blue': '#639ccf'
+        'term-blue': '#639ccf',
+        'term-header': '#484742',
+        'term-header-gradient-top': '#504b45',
+        'term-header-gradient-bot': '#3c3b37',
+        'term-header-button': '#515151'
       },
       keyframes: {
         'cursor-blink': {
