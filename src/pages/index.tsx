@@ -1,12 +1,12 @@
 import * as React from 'react';
 import type { HeadFC } from 'gatsby';
-import Hero from '../components/composites/Hero';
+import TerminalBody from '../components/composites/TerminalBody';
 import Layout from '../components/composites/Layout';
 
 const IndexPage = () => {
   return (
     <Layout>
-      <Hero />
+      <TerminalBody />
     </Layout>
   );
 };

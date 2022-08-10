@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const Hero = () => {
+const TerminalBody = () => {
   return (
     <h1 className="bg-term-aubergine">
       <div>
@@ -14,4 +14,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default TerminalBody;
