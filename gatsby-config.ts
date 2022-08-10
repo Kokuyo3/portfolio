@@ -20,6 +20,7 @@ const config: GatsbyConfig = {
     {
       resolve: 'gatsby-plugin-postcss',
       options: {
+        // eslint-disable-next-line @typescript-eslint/no-var-requires,import/no-extraneous-dependencies
         postCssPlugins: [require('tailwindcss')('./tailwind.config.js')]
       }
     },

@@ -32,6 +32,13 @@
     "no-debugger": "warn",
     "no-unused-vars": "warn",
     "import/no-unresolved": "error",
+    "react/jsx-max-props-per-line": [
+      1,
+      {
+        "maximum": 1,
+        "when": "multiline"
+      }
+    ],
     "prettier/prettier": [
       "error"
     ]
