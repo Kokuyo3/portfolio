@@ -1,16 +1,36 @@
-import * as React from 'react';
+import React, { useState } from 'react';
+import TermPrompt from '../TermPrompt';
+import HelpCommand from '../commands/HelpCommand';
 
 const TerminalBody = () => {
+  const [commandsTimeoutDone, setCommandsTimeoutDone] = useState(false);
+  const [promptTimeoutDone, setPromptTimeoutDone] = useState(false);
+  const [terminalLog, setTerminalLog] = useState([]);
+
+  setTimeout(() => {
+    setCommandsTimeoutDone(true);
+  }, 1000);
+
+  setTimeout(() => {
+    setPromptTimeoutDone(true);
+  }, 2000);
+
   return (
-    <h1 className="bg-term-aubergine">
+    <main className="bg-term-aubergine">
       <div>
-        <span className="text-xl font-bold text-term-green">guest@cstang.dev</span>
-        <span className="text-xl font-bold text-white">:</span>
-        <span className="text-xl font-bold text-term-blue">~</span>
-        <span className="text-xl font-bold text-white">$ hello world</span>
-        <span className="animate-cursor-blink ml-1 text-white">_</span>
+        <span className="term-text">Hello world!</span>
+        {commandsTimeoutDone ? (
+          <>
+            <br />
+            <br />
+            <HelpCommand />
+            {promptTimeoutDone ? (
+              <TermPrompt setTerminalLog={setTerminalLog} terminalLog={terminalLog} />
+            ) : null}
+          </>
+        ) : null}
       </div>
-    </h1>
+    </main>
   );
 };
 

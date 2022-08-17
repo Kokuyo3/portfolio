@@ -14,6 +14,7 @@ module.exports = {
         'term-aubergine': '#5E2750',
         'term-green': '#8ae234',
         'term-blue': '#639ccf',
+        'term-blue-command': '#5ae2de',
         'term-header': '#484742',
         'term-header-gradient-top': '#504b45',
         'term-header-gradient-bot': '#3c3b37',
@@ -29,5 +30,10 @@ module.exports = {
       }
     }
   },
-  plugins: [require('tailwindcss'), require('autoprefixer'), require('@tailwindcss/typography')]
+  plugins: [
+    require('tailwindcss'),
+    require('autoprefixer'),
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/forms')
+  ]
 };
