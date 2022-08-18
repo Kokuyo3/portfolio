@@ -4,6 +4,7 @@ import CommandNotFound from '../components/commands/CommandNotFound';
 import GitHubCommand from '../components/commands/GitHubCommand';
 import HelpCommand from '../components/commands/HelpCommand';
 import LinkedInCommand from '../components/commands/LinkedInCommand';
+import SkidCommand from '../components/commands/SkidCommand';
 
 class CommandValidator {
   private static commands: Record<string, Record<string, string | ReactNode>> = {
@@ -26,6 +27,11 @@ class CommandValidator {
       description: 'Links my LinkedIn',
       usage: 'linkedin',
       output: <LinkedInCommand />
+    },
+    skid: {
+      description: 'Some nostalgic tech-related doings and milestones from my childhood!',
+      usage: 'skid',
+      output: <SkidCommand />
     }
   };
 
