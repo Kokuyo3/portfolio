@@ -8,9 +8,12 @@ interface Props {
 const Layout = ({ children }: Props) => {
   return (
     <>
-      <div className="font-mono">
+      <div className="term-text bg-term-aubergine mx-auto min-h-screen">
         <Header />
-        <main className="bg-term-aubergine min-h-screen p-3">{children}</main>
+        <main className="p-3 relative flex flex-col h-full">
+          {children}
+          <div className="flex-1 grow shrink-0 basis-auto min-h-[10vh] max-h-[15vh]" />
+        </main>
       </div>
     </>
   );

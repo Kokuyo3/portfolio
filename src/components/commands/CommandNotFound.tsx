@@ -7,7 +7,7 @@ interface CommandNotFoundProps {
 const CommandNotFound = ({ command }: CommandNotFoundProps) => {
   return (
     <div>
-      <span className="term-text">{`${command}: command not found. Run 'help' for a list of valid commands.`}</span>
+      <span>{`${command}: command not found. Run 'help' for a list of valid commands.`}</span>
     </div>
   );
 };

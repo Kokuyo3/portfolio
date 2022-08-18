@@ -2,7 +2,7 @@ import React from 'react';
 
 const AboutCommand = () => {
   return (
-    <div className="term-text">
+    <div>
       <p className="indent-8">
         {"Hello there, my name is Cheryl Tang! I'm a Software Engineer with a degree in " +
           'Biomedical Engineering and concentration in Bioinformatics. In other words, my ' +

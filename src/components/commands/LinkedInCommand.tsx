@@ -2,7 +2,7 @@ import React from 'react';
 
 const LinkedInCommand = () => {
   return (
-    <div className="term-text">
+    <div>
       <span>My LinkedIn: </span>
       <a
         className="underline hover:text-blue-300"

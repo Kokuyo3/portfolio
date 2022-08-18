@@ -2,7 +2,7 @@ import React from 'react';
 
 const GitHubCommand = () => {
   return (
-    <div className="term-text">
+    <div>
       <span>My GitHub: </span>
       <a
         className="underline hover:text-blue-300"

@@ -2,7 +2,7 @@ import React from 'react';
 
 const HelpCommand = () => {
   return (
-    <div className="term-text">
+    <div>
       {'Here are some commands you can run:'}
       <p className="indent-10 text-term-blue-command">about</p>
       <p className="indent-10 text-term-blue-command">github</p>

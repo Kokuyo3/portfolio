@@ -16,9 +16,9 @@ const TerminalBody = () => {
   }, 2000);
 
   return (
-    <main className="bg-term-aubergine">
+    <main>
       <div>
-        <span className="term-text">Hello world!</span>
+        <span>Hello world!</span>
         {commandsTimeoutDone ? (
           <>
             <br />

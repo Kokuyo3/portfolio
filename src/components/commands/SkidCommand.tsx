@@ -2,7 +2,7 @@ import React from 'react';
 
 const SkidCommand = () => {
   return (
-    <div className="term-text">
+    <div>
       <ul>
         <li>
           ◽ Sent my first PC to the repair shop at the age of 3 by messing with the BIOS computer
