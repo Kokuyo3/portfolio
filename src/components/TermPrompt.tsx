@@ -10,8 +10,11 @@ const TermPrompt = ({ setTerminalLog, terminalLog }: TermPromptProps) => {
   const [text, setText] = useState('');
   const [inputWidth, setInputWidth] = useState('');
   const [executed, setExecuted] = useState(false);
+
   const span = useRef<HTMLSpanElement>(null);
   const input = useRef<HTMLInputElement>(null);
+
+  // Magic number substitutes
   const promptOffset = '21ch';
   const rightPageEdgeOffset = '1ch';
 
@@ -22,6 +25,25 @@ const TermPrompt = ({ setTerminalLog, terminalLog }: TermPromptProps) => {
       `min(calc(-100% + ${promptOffset} + ${spanNode?.offsetWidth}px), ${rightPageEdgeOffset})`
     );
   }, [text]);
+
+  const onKeyDown = (e: React.KeyboardEvent) => {
+    const selectionStart = input.current?.selectionStart;
+    const currentCaratOffset = `calc(-100% + ${promptOffset} + ${selectionStart}ch)`;
+
+    if (e.key === 'ArrowLeft') {
+      if (selectionStart == 0) {
+        setInputWidth(`min(calc(-100% + ${promptOffset}), ${rightPageEdgeOffset})`);
+      } else {
+        setInputWidth(`min(calc(${currentCaratOffset} - 1ch), ${rightPageEdgeOffset})`);
+      }
+    } else if (e.key === 'ArrowRight') {
+      if (selectionStart == input.current?.value.length) {
+        setInputWidth(`min(${currentCaratOffset}, ${rightPageEdgeOffset})`);
+      } else {
+        setInputWidth(`min(calc(${currentCaratOffset} + 1ch), ${rightPageEdgeOffset})`);
+      }
+    }
+  };
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setText(e.target.value);
@@ -55,11 +77,19 @@ const TermPrompt = ({ setTerminalLog, terminalLog }: TermPromptProps) => {
             spellCheck={false}
             value={text}
             onChange={onChange}
+            onKeyDown={onKeyDown}
             autoFocus={true}
             ref={input}
           />
+          {!executed && (
+            <span
+              className="absolute animate-cursor-blink text-white"
+              style={{ marginLeft: inputWidth }}
+            >
+              _
+            </span>
+          )}
           <input className="align-bottom p-0 hidden" type="submit" value="" />
-          {!executed && <span className="animate-cursor-blink ml-[-24.75rem] text-white">_</span>}
         </form>
       </div>
     </>
