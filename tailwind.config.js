@@ -14,11 +14,13 @@ module.exports = {
         'term-aubergine': '#5E2750',
         'term-green': '#8ae234',
         'term-blue': '#639ccf',
+        'term-orange': '#f68354',
         'term-blue-command': '#5ae2de',
         'term-header': '#484742',
         'term-header-gradient-top': '#504b45',
         'term-header-gradient-bot': '#3c3b37',
-        'term-header-button': '#515151'
+        'term-header-button': '#515151',
+        'term-header-menu': 'rgba(61,58,56,0.97)',
       },
       keyframes: {
         'cursor-blink': {
